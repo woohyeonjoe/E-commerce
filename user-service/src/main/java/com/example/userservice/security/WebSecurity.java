@@ -23,7 +23,7 @@ public class WebSecurity {
                 .csrf().disable()
 
                 .authorizeRequests()
-                .antMatchers("/users/**").permitAll()
+                .antMatchers("/**").permitAll()
                 .requestMatchers(PathRequest.toH2Console()).permitAll()     //h2-console 접속 가능하게 설정
                 .anyRequest().authenticated()
 
